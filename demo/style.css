@@ -1,0 +1,81 @@
+.responsive-tabs {
+  padding-right: 100px; }
+  .responsive-tabs > li:hover .btn-remove-tab {
+    color: #444444; }
+    .responsive-tabs > li:hover .btn-remove-tab:hover {
+      background: #d9534f;
+      color: white; }
+  .responsive-tabs .btn-remove-tab {
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+    color: #999999;
+    text-align: center;
+    margin-left: 5px;
+    cursor: pointer; }
+
+.responsive-tabs-container {
+  position: relative; }
+  .responsive-tabs-container .tabs-dropdown {
+    position: absolute;
+    right: 0;
+    margin-right: 0 !important; }
+    .responsive-tabs-container .tabs-dropdown.navbar-nav {
+      margin: 0 !important; }
+    @media only screen and (max-width: 767px) {
+      .responsive-tabs-container .tabs-dropdown .dropdown-menu {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        bottom: 20px;
+        left: 20px;
+        padding-top: 50px;
+        overflow: hidden;
+        overflow-y: scroll; }
+        .responsive-tabs-container .tabs-dropdown .dropdown-menu .dropdown-header {
+          position: fixed;
+          left: 20px;
+          right: 20px;
+          background: #FFF;
+          margin-top: -50px;
+          padding-top: 18px; }
+        .responsive-tabs-container .tabs-dropdown .dropdown-menu .close {
+          position: absolute;
+          top: 14px;
+          right: 20px; }
+        .responsive-tabs-container .tabs-dropdown .dropdown-menu .divider {
+          margin: 0; } }
+    .responsive-tabs-container .tabs-dropdown .dropdown-toggle {
+      width: 100px;
+      border-width: 1px 1px 0 1px;
+      border-style: solid;
+      border-color: #DDD;
+      position: relative;
+      display: block;
+      padding: 10px 15px;
+      border-radius: 4px 4px 0 0; }
+      .responsive-tabs-container .tabs-dropdown .dropdown-toggle .count {
+        margin-right: 5px; }
+      .responsive-tabs-container .tabs-dropdown .dropdown-toggle .caret {
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        border-left: 6px solid;
+        margin-left: 0;
+        vertical-align: initial; }
+
+.nav-tabs {
+  width: 100%;
+  overflow: hidden;
+  float: left; }
+  .nav-tabs > li {
+    min-width: 80px;
+    max-width: 150px; }
+    .nav-tabs > li a {
+      text-align: center;
+      border-width: 1px 1px 0 1px;
+      border-style: solid;
+      border-color: #DDD; }
+    .nav-tabs > li.active a, .nav-tabs > li.active:hover a {
+      background: #EEEEEE; }

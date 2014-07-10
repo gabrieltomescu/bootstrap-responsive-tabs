@@ -1,0 +1,88 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Responsive Tabs</title>
+  <meta name="description" content="Responsive Tabs">
+  <meta name="author" content="Gabriel Tomescu">
+
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script src="responsive-tabs.js"></script>
+
+  <style>
+    html { font-size: 10px; }
+    body { font-size: 1.3rem; margin: 2rem; }
+  </style>
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+<h1>Responsive Tabs</h1>
+<hr>
+<br>
+<strong>Instructions:</strong>
+<ol>
+	<li>Resize your browser window to see how tabs scale / respond</li>
+	<li>Add / remove tabs</li>
+</ol>
+
+<h3>Usage</h3>
+<p>Turns any Boostrap ".nav-tabs" container into responsive tabs:</p>
+<pre>
+  <code class="js">$('.tabs-container').responsiveTabs({
+    minWidth: "100",
+    maxWidth: "200"
+  }</code>
+</pre>
+<hr>
+
+<h3>Example</h3>
+<br>
+<ul class="nav nav-tabs js-example-1">
+  <li class="active"><a href="#home3" data-toggle="tab">Tab1</a></li>
+  <li><a href="#profile3" data-toggle="tab">Tab2</a></li>
+  <li><a href="#messages3" data-toggle="tab">Tab3</a></li>
+  <li><a href="#settings3" data-toggle="tab">Tab4</a></li>
+  <li><a href="#profile3" data-toggle="tab">Tab5</a></li>
+  <li><a href="#messages3" data-toggle="tab">Tab6</a></li>
+  <li><a href="#settings3" data-toggle="tab">Tab7</a></li>
+  <li><a href="#profile3" data-toggle="tab">Tab8</a></li>
+  <li><a href="#messages3" data-toggle="tab">Tab9</a></li>
+  <li><a href="#settings3" data-toggle="tab">Tab10</a></li>
+  <li><a href="#profile3" data-toggle="tab">Tab11</a></li>
+  <li><a href="#messages3" data-toggle="tab">Tab12</a></li>
+  <li><a href="#settings3" data-toggle="tab">Tab13</a></li>
+  <li><a href="#profile3" data-toggle="tab">Tab14</a></li>
+  <li><a href="#messages3" data-toggle="tab">Tab15</a></li>
+  <li><a href="#settings3" data-toggle="tab">Tab16</a></li>
+  <li><a href="#profile3" data-toggle="tab">Tab17</a></li>
+  <li><a href="#messages3" data-toggle="tab">Tab18</a></li>
+  <li><a href="#settings3" data-toggle="tab">Tab19</a></li>
+  <li><a href="#profile3" data-toggle="tab">Tab20</a></li>
+  <li><a href="#messages3" data-toggle="tab">Tab21</a></li>
+  <li><a href="#settings3" data-toggle="tab">Tab22</a></li>
+</ul>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<script>
+	$('.js-example-1').responsiveTabs({
+    minWidth: 150,
+    maxWidth: 250
+	});
+</script>
+</body>
+</html>
