@@ -1,28 +1,51 @@
-# Chosen
+# Bootstrap Responsive Tabs
 
-Chosen is a library for making long, unwieldy select boxes more user friendly.
+Bootstrap Responsive Tabs is a jQuery plugin to make Bootstrap tabs more responsive and mobile friendly. 
 
-- jQuery support: 1.4+
-- Prototype support: 1.7+
 
-For **documentation**, usage, and examples, see:  
-http://harvesthq.github.io/chosen/
+## Demo
+View the demo.
 
-For **downloads**, see:  
-https://github.com/harvesthq/chosen/releases/
 
-### Contributing to this project
+## Requirements
+- Bootstrap: 3+
+- jQuery: 1.9+
 
-We welcome all to participate in making Chosen the best software it can be. The repository is maintained by only a few people, but has accepted contributions from over 50 authors after reviewing hundreds of pull requests related to thousands of issues. You can help reduce the maintainers' workload (and increase your chance of having an accepted contribution to Chosen) by following the
-[guidelines for contributing](contributing.md).
+## Installation
+Bootstrap Responsive Tabs is available on [Bower](https://github.com/bower/bower):
 
-* [Bug reports](contributing.md#bugs)
-* [Feature requests](contributing.md#features)
-* [Pull requests](contributing.md#pull-requests)
+```bower install bootstrap-responsive-tabs```
 
-### Chosen Credits
+## Usage
+The JS:
+```
+$("#js-tabs-example").bootstrap-responsive-tabs({
+    minWidth: "100",
+    maxWidth: "200"
+});
+```
 
-- Concept and development by [Patrick Filler](http://patrickfiller.com) for [Harvest](http://getharvest.com/).
-- Design and CSS by [Matthew Lettini](http://matthewlettini.com/)
-- Repository maintained by [@pfiller](http://github.com/pfiller), [@kenearley](http://github.com/kenearley), [@stof](http://github.com/stof) and [@koenpunt](http://github.com/koenpunt).
-- Chosen includes [contributions by many fine folks](https://github.com/harvesthq/chosen/contributors).
+The HTML:
+```
+<ul class="nav nav-tabs js-tabs-example">
+  <li class="active"><a href="#tab1" data-toggle="tab">Tab1</a></li>
+  <li><a href="#tab2" data-toggle="tab">Tab2</a></li>
+  <li><a href="#tab3" data-toggle="tab">Tab3</a></li>
+  <li><a href="#tab4" data-toggle="tab">Tab4</a></li>
+  <li><a href="#tab5" data-toggle="tab">Tab5</a></li>
+</ul>
+```
+
+## Options
+```minWidth```: The minimum width of each tab.
+
+```maxWidth```: The maximum width of each tab.
+
+
+
+##  Credits
+
+A huge thanks to [Dylan Robinson](http://www.dylan.com) for help with optimizing the javascript.
+
+## License
+The Bootstrap Responsive Tabs plugin is licensed under the MIT license. See the LICENSE file for full details.
