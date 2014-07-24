@@ -6,8 +6,8 @@
 
   <title>Responsive Tabs</title>
   <meta name="description" content="Responsive Tabs">
-  <meta name="author" content="Gabriel Tomescu">
-
+  <meta name="author" content="Gabriel Tomescu"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
   <link href="main.css" rel="stylesheet">
   <link href="../dist/main.css" rel="stylesheet">
@@ -49,7 +49,6 @@
     for ( var i = 1; i < 21; i++ ) {
       // Generate tabs
       $(".js-example").append('<li><a href="#tab' + i + '" role="tab" data-toggle="tab">Tab' + i + '</a></li>');
-      
       // Generate tab content
       $(".tab-content").append('<div class="tab-pane" id="tab' + i + '"></div>');
     }
@@ -57,7 +56,7 @@
     $(".js-example").find("li").first().addClass("active");
     $(".tab-content").find(".tab-pane").lorem({ type: 'words',amount:'400',ptags:true});
     $(".tab-content").find(".tab-pane").first().addClass("active");
-    
+
     $('.js-example').bootstrapResponsiveTabs({
       minTabWidth: 80,
       maxTabWidth: 150

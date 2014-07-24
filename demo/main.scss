@@ -58,6 +58,8 @@ body { font-size: 1.3rem; margin: 2rem; background: $gray; color: #566473; paddi
 .tab-content {
   padding: 10px;
   height: 400px;
+  overflow: hidden;
+  overflow-y: scroll;
   background: $tab--active--bg-color;
   border: {
     width: 0 1px 1px 1px;
@@ -67,9 +69,6 @@ body { font-size: 1.3rem; margin: 2rem; background: $gray; color: #566473; paddi
   }
 
   .tab-pane {
-    // font-size: 32px;
-    // text-align: center;
-    // padding: 180px 0;
     color: #566473;
   }
 }

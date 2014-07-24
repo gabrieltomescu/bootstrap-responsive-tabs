@@ -41,6 +41,8 @@ body {
 .tab-content {
   padding: 10px;
   height: 400px;
+  overflow: hidden;
+  overflow-y: scroll;
   background: white;
   border-width: 0 1px 1px 1px;
   border-style: solid;
