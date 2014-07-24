@@ -20,8 +20,8 @@ Bootstrap Responsive Tabs is available on [Bower](https://github.com/bower/bower
 The JS:
 ```
 $("#js-tabs-example").bootstrap-responsive-tabs({
-    minWidth: "100",
-    maxWidth: "200"
+    minTabWidth: "100",
+    maxTabWidth: "200"
 });
 ```
 
@@ -37,9 +37,9 @@ The HTML:
 ```
 
 ## Options
-```minWidth```: The minimum width of each tab.
+```minTabWidth```: The minimum width of each tab.
 
-```maxWidth```: The maximum width of each tab.
+```maxTabWidth```: The maximum width of each tab.
 
 
 

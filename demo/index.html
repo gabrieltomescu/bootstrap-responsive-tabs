@@ -9,15 +9,12 @@
   <meta name="author" content="Gabriel Tomescu">
 
   <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
+  <link href="main.css" rel="stylesheet">
+  <link href="../dist/main.css" rel="stylesheet">
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-  <script src="responsive-tabs.js"></script>
-
-  <style>
-    html { font-size: 10px; }
-    body { font-size: 1.3rem; margin: 2rem; }
-  </style>
+  <script src="http://sanderkorvemaker.nl/jquery/js/jquery.lorem.js"></script>
+  <script src="../dist/bootstrap-responsive-tabs.js"></script>
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -25,64 +22,47 @@
 </head>
 
 <body>
-<h1>Responsive Tabs</h1>
+<h1>Bootstrap Responsive Tabs</h1>
+<a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
 <hr>
-<br>
-<strong>Instructions:</strong>
+<h3>How to test:</h3>
+<p>Resize your browser window to see how tabs scale / respond.</p>
+<h3>Notes on design:</h3>
 <ol>
-	<li>Resize your browser window to see how tabs scale / respond</li>
-	<li>Add / remove tabs</li>
+  <li>Inspired by Safari-style browser tabs.</li>
+	<li>Tabs shrink/grow based on min and max width.</li>
+  <li>If tabs don't fit across the container width, a dropdown appears to the right of tabs.
+	<li>For devices with screen width of < 768px, the tabs dropdown becomes an overlay.</li>
 </ol>
 
-<h3>Usage</h3>
-<p>Turns any Boostrap ".nav-tabs" container into responsive tabs:</p>
-<pre>
-  <code class="js">$('.tabs-container').responsiveTabs({
-    minWidth: "100",
-    maxWidth: "200"
-  }</code>
-</pre>
 <hr>
 
-<h3>Example</h3>
 <br>
-<ul class="nav nav-tabs js-example-1">
-  <li class="active"><a href="#home3" data-toggle="tab">Tab1</a></li>
-  <li><a href="#profile3" data-toggle="tab">Tab2</a></li>
-  <li><a href="#messages3" data-toggle="tab">Tab3</a></li>
-  <li><a href="#settings3" data-toggle="tab">Tab4</a></li>
-  <li><a href="#profile3" data-toggle="tab">Tab5</a></li>
-  <li><a href="#messages3" data-toggle="tab">Tab6</a></li>
-  <li><a href="#settings3" data-toggle="tab">Tab7</a></li>
-  <li><a href="#profile3" data-toggle="tab">Tab8</a></li>
-  <li><a href="#messages3" data-toggle="tab">Tab9</a></li>
-  <li><a href="#settings3" data-toggle="tab">Tab10</a></li>
-  <li><a href="#profile3" data-toggle="tab">Tab11</a></li>
-  <li><a href="#messages3" data-toggle="tab">Tab12</a></li>
-  <li><a href="#settings3" data-toggle="tab">Tab13</a></li>
-  <li><a href="#profile3" data-toggle="tab">Tab14</a></li>
-  <li><a href="#messages3" data-toggle="tab">Tab15</a></li>
-  <li><a href="#settings3" data-toggle="tab">Tab16</a></li>
-  <li><a href="#profile3" data-toggle="tab">Tab17</a></li>
-  <li><a href="#messages3" data-toggle="tab">Tab18</a></li>
-  <li><a href="#settings3" data-toggle="tab">Tab19</a></li>
-  <li><a href="#profile3" data-toggle="tab">Tab20</a></li>
-  <li><a href="#messages3" data-toggle="tab">Tab21</a></li>
-  <li><a href="#settings3" data-toggle="tab">Tab22</a></li>
-</ul>
+<!-- Nav tabs -->
+<ul class="nav nav-tabs js-example" role="tablist"></ul>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-
+<!-- Tab panes -->
+<div class="tab-content"></div>
 
 <script>
-	$('.js-example-1').responsiveTabs({
-    minWidth: 150,
-    maxWidth: 250
-	});
+  $(document).ready(function () {
+    for ( var i = 1; i < 21; i++ ) {
+      // Generate tabs
+      $(".js-example").append('<li><a href="#tab' + i + '" role="tab" data-toggle="tab">Tab' + i + '</a></li>');
+      
+      // Generate tab content
+      $(".tab-content").append('<div class="tab-pane" id="tab' + i + '"></div>');
+    }
+
+    $(".js-example").find("li").first().addClass("active");
+    $(".tab-content").find(".tab-pane").lorem({ type: 'words',amount:'400',ptags:true});
+    $(".tab-content").find(".tab-pane").first().addClass("active");
+    
+    $('.js-example').bootstrapResponsiveTabs({
+      minTabWidth: 80,
+      maxTabWidth: 150
+    });
+  });
 </script>
 </body>
 </html>

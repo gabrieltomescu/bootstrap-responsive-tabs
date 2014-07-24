@@ -1,0 +1,75 @@
+$gray: #F7F7F9;
+$tab--default--text-color: #555;
+$tab--default--bg-color: darken($gray, 3%);
+$tab--default--border--color: darken($tab--default--bg-color, 7%);
+$tab--active--bg-color: #FFF;
+$tab--active--text-color: #444;
+$tab--active--border-color: darken($tab--active--bg-color, 15%);
+
+
+html { font-size: 10px; background: #FFF; }
+body { font-size: 1.3rem; margin: 2rem; background: $gray; color: #566473; padding: 15px; border-radius: 5px; }
+
+
+.nav-tabs {
+  width: 100%;
+  float: left;
+  border-bottom-color: $tab--active--border-color;
+
+  > li {
+    a {
+      text-align: center;
+      border: {
+        width: 1px 1px 0 1px;
+        style: solid;
+        color: $tab--default--border--color;
+      }
+      color: $tab--default--text-color;
+      background: $tab--default--bg-color;
+
+      &:hover {
+        background: #F9F9F9;
+        border-color: $tab--active--border-color;
+      }
+    }
+
+    &.active, &.active:hover {
+      a {
+        color: $tab--active--text-color;
+        background: $tab--active--bg-color;
+        border-color: $tab--active--border-color;
+        border-bottom-color: transparent;;
+      }
+    }
+  }
+}
+
+.tabs-dropdown {
+  .dropdown-toggle {
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+    border-color: $tab--default--border--color;
+    border-radius: 4px 4px 0 0;
+    color: $tab--default--text-color;
+    background: $tab--default--bg-color;
+  }
+}
+
+.tab-content {
+  padding: 10px;
+  height: 400px;
+  background: $tab--active--bg-color;
+  border: {
+    width: 0 1px 1px 1px;
+    style: solid;
+    color: $tab--active--border-color;
+    radius: 0 0 4px 4px;
+  }
+
+  .tab-pane {
+    // font-size: 32px;
+    // text-align: center;
+    // padding: 180px 0;
+    color: #566473;
+  }
+}

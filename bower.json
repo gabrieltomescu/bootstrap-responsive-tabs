@@ -1,0 +1,23 @@
+{
+  "name": "bootstrap-responsive-tabs",
+  "version": "1.0.0",
+  "authors": [
+    "Gabriel Tomescu <gabe@pushpulllabs.com>"
+  ],
+  "description": "Bootstrap responsive tabs.",
+  "main": "dist/bootstrap-responsive-tabs.js",
+  "keywords": [
+    "bootstrap",
+    "tabs",
+    "responsive"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
