@@ -4,7 +4,7 @@ Bootstrap Responsive Tabs is a jQuery plugin to make Bootstrap tabs more respons
 
 
 ## Demo
-View the demo.
+[View the demo](http://home.golden.net/~tomescu/bootstrap-responsive-tabs/demo/)
 
 
 ## Requirements
