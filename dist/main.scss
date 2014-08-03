@@ -2,11 +2,13 @@
 // Responsive Tabs
 //
 
+$tabs-dropdown-toggle-width: 102px;
+
 .responsive-tabs-container {
   position: relative;
 
   .responsive-tabs {
-    padding-right: 100px;
+    padding-right: $tabs-dropdown-toggle-width;
   }
   
   .tabs-dropdown {
@@ -46,7 +48,7 @@
     }
 
     .dropdown-toggle {
-      width: 100px;
+      width: $tabs-dropdown-toggle-width;
 
       position: relative;
       display: block;

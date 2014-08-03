@@ -42,5 +42,8 @@ The HTML:
 ```maxTabWidth```: The maximum width of each tab.
 
 
+## Credits
+Many thanks for [Dylan Robinson](https://github.com/Robinson7D) for help with creating a debouncing function when resizing the tabs.
+
 ## License
 The Bootstrap Responsive Tabs plugin is licensed under the MIT license. See the LICENSE file for full details.

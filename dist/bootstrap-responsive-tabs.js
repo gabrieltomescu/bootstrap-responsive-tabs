@@ -58,7 +58,7 @@
             var defaultTabWidth = $tabs.first().width();
             var numTabs = $tabs.length;
 
-            var numVisibleHorizontalTabs = (Math.floor(menuWidth / defaultTabWidth)) + 1; // Offset by 1 to catch half cut-off tabs
+            var numVisibleHorizontalTabs = (Math.ceil(menuWidth / defaultTabWidth));
             var numVisibleVerticalTabs = numTabs - numVisibleHorizontalTabs;
 
             for(var i = 0; i < $tabs.length; i++){

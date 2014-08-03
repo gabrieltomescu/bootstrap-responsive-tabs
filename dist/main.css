@@ -1,7 +1,7 @@
 .responsive-tabs-container {
   position: relative; }
   .responsive-tabs-container .responsive-tabs {
-    padding-right: 100px; }
+    padding-right: 102px; }
   .responsive-tabs-container .tabs-dropdown {
     position: absolute;
     right: 0;
@@ -33,7 +33,7 @@
         .responsive-tabs-container .tabs-dropdown .dropdown-menu .divider {
           margin: 0; } }
     .responsive-tabs-container .tabs-dropdown .dropdown-toggle {
-      width: 100px;
+      width: 102px;
       position: relative;
       display: block;
       padding: 10px 15px; }
