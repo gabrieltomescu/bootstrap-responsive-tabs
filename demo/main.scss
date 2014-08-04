@@ -1,6 +1,7 @@
-$gray: #F7F7F9;
-$tab--default--text-color: #555;
-$tab--default--bg-color: darken($gray, 3%);
+$bg-color: #FFF;
+$bg-text-color: #444;
+$tab--default--text-color: #444;
+$tab--default--bg-color: darken($bg-color, 5%);
 $tab--default--border--color: darken($tab--default--bg-color, 7%);
 $tab--active--bg-color: #FFF;
 $tab--active--text-color: #444;
@@ -8,7 +9,7 @@ $tab--active--border-color: darken($tab--active--bg-color, 15%);
 
 
 html { font-size: 10px; background: #FFF; }
-body { font-size: 1.3rem; margin: 2rem; background: $gray; color: #566473; padding: 15px; border-radius: 5px; }
+body { font-size: 1.3rem; background: $bg-color; color: $bg-text-color; padding: 30px; border-radius: 5px; }
 
 
 .nav-tabs {
@@ -44,6 +45,11 @@ body { font-size: 1.3rem; margin: 2rem; background: $gray; color: #566473; paddi
   }
 }
 
+.instructions {
+  text-align: center;
+  padding: 10px 0;
+}
+
 .tabs-dropdown {
   .dropdown-toggle {
     border-width: 1px 1px 0 1px;
@@ -57,9 +63,10 @@ body { font-size: 1.3rem; margin: 2rem; background: $gray; color: #566473; paddi
 
 .tab-content {
   padding: 10px;
-  height: 400px;
+  height: 300px;
   overflow: hidden;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   background: $tab--active--bg-color;
   border: {
     width: 0 1px 1px 1px;
