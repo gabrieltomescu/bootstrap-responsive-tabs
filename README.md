@@ -37,6 +37,8 @@ The HTML:
 ```
 
 ## Options
+A tab can have minimum and maximum width, when the screen stretches more than 480px. 
+
 ```minTabWidth```: The minimum width of each tab.
 
 ```maxTabWidth```: The maximum width of each tab.
