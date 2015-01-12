@@ -54,6 +54,22 @@
             // Determine which tabs to show/hide
             var $tabs = TABS_OBJECT.tabsHorizontalContainer.children('li');
             $tabs.width("100%");
+
+            // Set min and max widths for tabs
+            // On mobile devices smaller than 480px wide, remove min/max width restriction
+            if (window.innerWidth < 480) {
+              $tabs.each(function(i) {
+                $(this)
+                  .css("min-width", 0)
+                  .css("max-width", "none");
+              });
+            } else {
+              $tabs.each(function(i) {
+                $(this)
+                  .css("min-width", settings.minTabWidth + "px")
+                  .css("max-width", settings.maxTabWidth + "px");
+              });
+            }
             
             var defaultTabWidth = $tabs.first().width();
             var numTabs = $tabs.length;
@@ -144,13 +160,6 @@
             // Clone each tab into the dropdown
             TABS_OBJECT.tabsVerticalContainer = TABS_OBJECT.tabsHorizontalContainer.siblings(".tabs-dropdown").find(".dropdown-menu");
             $tabs.clone().appendTo(TABS_OBJECT.tabsVerticalContainer);
-
-            // Add min and max width to horizontal tabs only
-            $tabs.each(function(i) {
-              $(this)
-                .css("min-width", settings.minTabWidth + "px")
-                .css("max-width", settings.maxTabWidth + "px");
-            });
 
             // Update tabs
             update_tabs();
