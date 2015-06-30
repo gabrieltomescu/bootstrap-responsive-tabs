@@ -13,7 +13,7 @@
   <link href="../dist/main.css" rel="stylesheet">
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-  <script src="http://sanderkorvemaker.nl/jquery/js/jquery.lorem.js"></script>
+  <script src="lorem.js"></script>
   <script src="../dist/bootstrap-responsive-tabs.js"></script>
 
   <!--[if lt IE 9]>
@@ -50,11 +50,11 @@
       // Generate tabs
       $(".js-example").append('<li><a href="#tab' + i + '" role="tab" data-toggle="tab">Tab' + i + '</a></li>');
       // Generate tab content
-      $(".tab-content").append('<div class="tab-pane" id="tab' + i + '"></div>');
+      $(".tab-content").append('<div data-lorem="p10" class="tab-pane" id="tab' + i + '"></div>');
     }
 
+    $(".tab-content").ipsum();
     $(".js-example").find("li").first().addClass("active");
-    $(".tab-content").find(".tab-pane").lorem({ type: 'words',amount:'400',ptags:true});
     $(".tab-content").find(".tab-pane").first().addClass("active");
 
     $('.js-example').bootstrapResponsiveTabs({
